@@ -9,7 +9,7 @@
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #f2f2f2;
-            color: #888; /* светло-серый текст */
+            color: #888;
             margin: 0;
             padding: 0;
         }
@@ -35,44 +35,50 @@
 
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
         }
 
         .cell {
-            background-color: #e0e0e0;
             border: 4px solid #800000;
             border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
             aspect-ratio: 1 / 1;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            color: #888;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-        }
-
-        .cell img {
-            max-width: 80%;
-            border-radius: 10px;
-            margin: 0 auto 15px auto;
+            transition: transform 0.3s, box-shadow 0.3s;
+            background-color: #e0e0e0; /* запасной фон */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
         }
 
         .cell h2 {
-            color: #888;
-            margin-bottom: 10px;
-        }
-
-        .cell p {
-            color: #888;
+            margin: 5px 0;
             font-size: 1em;
         }
 
+        .cell p {
+            font-size: 0.9em;
+        }
+
         .cell:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.25);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+        }
+
+        /* фоны ячеек через прямую ссылку или путь */
+        .cell-biology {
+            background-image: url('https://via.placeholder.com/100'); /* вставь ссылку на свою картинку */
+        }
+
+        .cell-anatomy {
+            background-image: url('https://via.placeholder.com/100'); /* вставь ссылку на свою картинку */
         }
 
         @media (max-width: 600px) {
@@ -90,13 +96,11 @@
         <p>medicine and dentistry 🫀</p>
 
         <div class="grid-container">
-            <a href="#" class="cell">
-                <img src="https://via.placeholder.com/150" alt="Биология">
+            <a href="#" class="cell cell-biology">
                 <h2>Заметки по биологии</h2>
             </a>
 
-            <div class="cell">
-                <img src="https://via.placeholder.com/150" alt="Анатомия человека">
+            <div class="cell cell-anatomy">
                 <h2>Анатомия человека</h2>
                 <p>Здесь можно добавить описание или заметки по анатомии.</p>
             </div>
