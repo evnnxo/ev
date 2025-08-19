@@ -52,10 +52,11 @@
             padding: 10px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
             transition: transform 0.3s, box-shadow 0.3s;
-            background-color: #e0e0e0; /* запасной фон */
+            background-color: #e0e0e0;
             background-position: center;
             background-repeat: no-repeat;
             background-size: contain;
+            text-decoration: none;
         }
 
         .cell h2 {
@@ -72,13 +73,12 @@
             box-shadow: 0 6px 12px rgba(0,0,0,0.25);
         }
 
-        /* фоны ячеек через прямую ссылку или путь */
         .cell-biology {
-            background-image: url('https://via.placeholder.com/100'); /* вставь ссылку на свою картинку */
+            background-image: url('https://via.placeholder.com/100');
         }
 
         .cell-anatomy {
-            background-image: url('https://via.placeholder.com/100'); /* вставь ссылку на свою картинку */
+            background-image: url('https://via.placeholder.com/100');
         }
 
         @media (max-width: 600px) {
@@ -96,14 +96,14 @@
         <p>medicine and dentistry 🫀</p>
 
         <div class="grid-container">
-            <a href="#" class="cell cell-biology">
+            <a href="biology.html" class="cell cell-biology">
                 <h2>Заметки по биологии</h2>
             </a>
 
-            <div class="cell cell-anatomy">
+            <a href="anatomy.html" class="cell cell-anatomy">
                 <h2>Анатомия человека</h2>
                 <p>Здесь можно добавить описание или заметки по анатомии.</p>
-            </div>
+            </a>
         </div>
     </main>
 </body>
