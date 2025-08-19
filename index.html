@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,6 @@
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #f2f2f2;
-            color: #888;
             margin: 0;
             padding: 0;
         }
@@ -23,19 +22,14 @@
 
         main {
             padding: 20px;
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
             text-align: center;
         }
 
-        main p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
-        }
-
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* уменьшенные квадраты */
+            grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
             gap: 15px;
         }
 
@@ -49,7 +43,7 @@
             align-items: center;
             color: #fff;
             text-align: center;
-            padding: 8px; /* уменьшенный padding */
+            padding: 8px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
             transition: transform 0.3s, box-shadow 0.3s;
             background-color: #e0e0e0;
@@ -61,11 +55,7 @@
 
         .cell h2 {
             margin: 5px 0;
-            font-size: 0.9em; /* чуть меньше текст */
-        }
-
-        .cell p {
-            font-size: 0.8em;
+            font-size: 0.9em;
         }
 
         .cell:hover {
@@ -73,18 +63,14 @@
             box-shadow: 0 6px 12px rgba(0,0,0,0.25);
         }
 
-        .cell-biology {
-            background-image: url('https://via.placeholder.com/80');
-        }
-
-        .cell-anatomy {
-            background-image: url('https://via.placeholder.com/80');
-        }
+        .cell-biology { background-image: url('https://via.placeholder.com/80'); }
+        .cell-botany { background-image: url('https://via.placeholder.com/80'); }
+        .cell-anatomy { background-image: url('https://via.placeholder.com/80'); }
+        .cell-chemistry { background-image: url('https://via.placeholder.com/80'); }
+        .cell-math { background-image: url('https://via.placeholder.com/80'); }
 
         @media (max-width: 600px) {
-            .grid-container {
-                grid-template-columns: 1fr;
-            }
+            .grid-container { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -93,16 +79,27 @@
         <h1>ev site for study)</h1>
     </header>
     <main>
-        <p>medicine and dentistry 🫀</p>
+        <p>medicine and science 🫀</p>
 
         <div class="grid-container">
             <a href="biology.html" class="cell cell-biology">
-                <h2>Заметки по биологии</h2>
+                <h2>Биология</h2>
+            </a>
+
+            <a href="botany.html" class="cell cell-botany">
+                <h2>Ботаника</h2>
             </a>
 
             <a href="anatomy.html" class="cell cell-anatomy">
-                <h2>Анатомия человека</h2>
-                <p>Основные темы по анатомии</p>
+                <h2>Анатомия</h2>
+            </a>
+
+            <a href="chemistry.html" class="cell cell-chemistry">
+                <h2>Химия</h2>
+            </a>
+
+            <a href="math.html" class="cell cell-math">
+                <h2>Математика</h2>
             </a>
         </div>
     </main>
