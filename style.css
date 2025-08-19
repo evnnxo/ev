@@ -1,24 +1,22 @@
 /* общие стили */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f9f9f9;
+    background-color: #f2f2f2; /* светло-серый фон страницы */
     color: #333;
     margin: 0;
     padding: 0;
 }
 
-/* шапка */
 header {
-    background-color: #4CAF50;
+    background-color: #800000; /* бордовый цвет */
     color: white;
     text-align: center;
     padding: 20px 0;
 }
 
-/* основной блок */
 main {
     padding: 20px;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     text-align: center;
 }
@@ -28,52 +26,54 @@ main p {
     margin-bottom: 30px;
 }
 
-/* ссылки с картинками */
-a.biology-link {
-    display: inline-block;
-    text-decoration: none;
-    color: #333;
-    margin-bottom: 30px;
+/* контейнер для карточек */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* карточки */
+.card {
+    background-color: #e0e0e0; /* светло-серый фон карточек */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
     transition: transform 0.3s;
 }
 
-a.biology-link:hover {
+.card:hover {
     transform: scale(1.05);
 }
 
-a.biology-link img {
-    max-width: 300px;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    display: block;
-    margin: 0 auto 10px auto;
-}
-
-/* новый блок с анатомией */
-.anatomy-section {
-    text-align: center;
-    margin-top: 40px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.anatomy-section h2 {
-    color: #4CAF50;
-    margin-bottom: 20px;
-}
-
-.anatomy-section img {
+.card img {
     max-width: 100%;
-    height: auto;
     border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    margin-bottom: 15px;
 }
 
-.anatomy-section p {
-    margin-top: 15px;
-    font-size: 1em;
+.card h2 {
+    color: #800000; /* бордовый цвет заголовков карточек */
+    margin-bottom: 10px;
+}
+
+.card p {
     color: #555;
+    font-size: 1em;
+}
+
+/* адаптивность для мобильных устройств */
+@media (max-width: 600px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .card {
+        max-width: 90%;
+    }
 }
