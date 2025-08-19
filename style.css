@@ -1,7 +1,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f2f2f2;
-    color: #333;
+    color: #888; /* светло-серый текст */
     margin: 0;
     padding: 0;
 }
@@ -31,39 +31,42 @@ main p {
     gap: 20px;
 }
 
-/* ячейки */
 .cell {
     background-color: #e0e0e0;
-    border: 2px solid #800000;
+    border: 4px solid #800000; /* более толстая рамка */
     border-radius: 10px;
     padding: 20px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
+    aspect-ratio: 1 / 1; /* квадратные ячейки */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #888; /* светло-серый текст */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* лёгкая постоянная тень */
 }
 
 .cell img {
-    max-width: 100%;
+    max-width: 80%;
     border-radius: 10px;
-    margin-bottom: 15px;
+    margin: 0 auto 15px auto;
 }
 
 .cell h2 {
-    color: #800000;
+    color: #888;
     margin-bottom: 10px;
 }
 
 .cell p {
-    color: #555;
+    color: #888;
     font-size: 1em;
 }
 
-/* эффект при наведении */
 .cell:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.25); /* усиленная тень при наведении */
 }
 
-/* адаптивность для телефона */
 @media (max-width: 600px) {
     .grid-container {
         grid-template-columns: 1fr;
