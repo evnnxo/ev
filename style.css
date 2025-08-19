@@ -1,17 +1,27 @@
-
+/* общий стиль сайта */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif; /* шрифт Roboto */
     margin: 0;
     padding: 0;
-    background: #1a1a1a;
-    color: #f2f2f2;
+    background: #1a1a1a; /* тёмный фон */
+    color: #cccccc;      /* светло-серый текст */
 }
+
+/* шапка сайта */
 header {
-    background: #800020;
+    background: #800020; /* бордовый цвет */
     padding: 20px;
     text-align: center;
 }
+
+/* заголовок h1 */
 h1 {
     margin: 0;
+    text-align: center; /* выравнивание заголовка по центру */
 }
-        
+
+/* основной контент */
+main {
+    text-align: center; /* центрируем текст внутри main */
+}
+
