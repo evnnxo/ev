@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ev personal site</title>
-    <!-- подключение Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -15,18 +14,21 @@
     <main>
         <p>medicine and dentistry 🫀</p>
 
-        <!-- блок-ссылка на биологию -->
-        <a href="biology.html" class="biology-link">
-            <img src="biology.jpg" alt="Биология" />
-            <span>Заметки по биологии</span>
-        </a>
+        <!-- контейнер для карточек -->
+        <div class="cards-container">
+            <!-- карточка биологии -->
+            <a href="biology.html" class="card">
+                <img src="biology.jpg" alt="Биология">
+                <h2>Заметки по биологии</h2>
+            </a>
 
-        <!-- блок с изображением анатомии -->
-        <section class="anatomy-section">
-            <h2>Анатомия человека</h2>
-            <img src="anatomy.jpg" alt="Анатомия человека">
-            <p>Здесь можно добавить описание или заметки по анатомии.</p>
-        </section>
+            <!-- карточка анатомии -->
+            <div class="card">
+                <img src="anatomy.jpg" alt="Анатомия человека">
+                <h2>Анатомия человека</h2>
+                <p>Здесь можно добавить описание или заметки по анатомии.</p>
+            </div>
+        </div>
     </main>
 </body>
 </html>
